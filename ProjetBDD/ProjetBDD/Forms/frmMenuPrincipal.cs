@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetBDD.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
+        frmAbonnement frmAbonnement = new frmAbonnement();
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -75,6 +77,13 @@ namespace ProjetBDD
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void miAbonnement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAbonnement.ShowDialog();
+            this.Show();
         }
     }
 }
