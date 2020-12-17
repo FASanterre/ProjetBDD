@@ -66,6 +66,7 @@ namespace ProjetBDD
             this.tbMotDePasse.PasswordChar = '*';
             this.tbMotDePasse.Size = new System.Drawing.Size(266, 34);
             this.tbMotDePasse.TabIndex = 5;
+            this.tbMotDePasse.Text = "Password1$";
             // 
             // label2
             // 
@@ -107,7 +108,7 @@ namespace ProjetBDD
             this.lblErreur.Size = new System.Drawing.Size(0, 13);
             this.lblErreur.TabIndex = 9;
             // 
-            // Form1
+            // frmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +120,7 @@ namespace ProjetBDD
             this.Controls.Add(this.tbMotDePasse);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmConnexion";
             this.Text = "Connexion au système";
             this.ResumeLayout(false);
             this.PerformLayout();
