@@ -136,8 +136,53 @@ create table PrixDepensesAbonnements(
 	NoTypeAbonnement int not null,
 	Annee date not null,
 	Prix money not null,
-	DepensesObligatoires varchar(50) not null,
+	DepensesObligatoires money not null,
 	Remarques varchar(50),
 	primary key(NoTypeAbonnement, Annee),
 	foreign key (NoTypeAbonnement) references TypesAbonnement(No)
 )
+
+insert into Provinces values ('AB','Alberta','')
+insert into Provinces values ('BC','Colombie-Britannique','')
+insert into Provinces values ('MB','Manitoba','')
+insert into Provinces values ('NB','Nouveau-Brunswick','')
+insert into Provinces values ('NL','Terre-Neuve et Labrador','')
+insert into Provinces values ('NT','Territoires du Nord-Ouest','')
+insert into Provinces values ('NS','Nouvelle-Écosse','')
+insert into Provinces values ('NU','Nunavut','')
+insert into Provinces values ('ON','Ontario','')
+insert into Provinces values ('PE','Île-du-Prince-Édouard','')
+insert into Provinces values ('QC','Québec','')
+insert into Provinces values ('SK','Saskatchewan','')
+insert into Provinces values ('YT','Territoire du Yukon','')
+
+
+insert into TypesEmploye values (1,'Administrateur','Il n''y en a qu''un et son numéro est 1')
+insert into TypesEmploye values (2,'Direction','')
+insert into TypesEmploye values (3,'Propriétaire d''un club','')
+insert into TypesEmploye values (4,'Employé d''un club','')
+insert into TypesEmploye values (5,'Employé Pro-Shop','')
+insert into TypesEmploye values (6,'Employé d''un restaurant','')
+insert into TypesEmploye values (7,'Professeur de golf','')
+
+insert into TypesAbonnement values (1,'Personne seule','')
+insert into PrixDepensesAbonnements values (1,'01-01-2020',850,400,'')
+insert into TypesAbonnement values (2,'Âge d''or','')
+insert into PrixDepensesAbonnements values (2,'01-01-2020',500,400,'')
+insert into TypesAbonnement values (3,'Couple','')
+insert into PrixDepensesAbonnements values (3,'01-01-2020',1200,700,'')
+insert into TypesAbonnement values (4,'Famille (couple + 1 enfant)','')
+insert into PrixDepensesAbonnements values (4,'01-01-2020',1700,700,'')
+insert into TypesAbonnement values (5,'Famille (couple + 2 enfants)','')
+insert into PrixDepensesAbonnements values (5,'01-01-2020',1900,700,'')
+insert into TypesAbonnement values (6,'Famille (couple + 3 enfants)','')
+insert into PrixDepensesAbonnements values (6,'01-01-2020',2100,700,'')
+
+insert into Employes values (1, 'Password1$','Santerre','Félix-André','H',19,126,'Jacques-Plantes','Vaudreuil','QC','J7V0R7','4504246320','5149236320','fasanterre@hotmail.com',14,1,'')
+
+insert into Terrains values (1,'Cypress Point',18,'Superbe terrain de 18 trous','')
+insert into Terrains values (2,'Whistling Straits',18,'Superbe terrain de 18 trous','')
+insert into Terrains values (3,'Pebble Beach',18,'Superbe terrain de 18 trous','')
+insert into Terrains values (4,'Augusta National',9,'Superbe terrain de 9 trous','')
+insert into Terrains values (5,'Spyglass Hill',9,'Superbe terrain de 9 trous','')
+insert into Terrains values (6,'Royal Portrush',9,'Superbe terrain de 9 trous','')
