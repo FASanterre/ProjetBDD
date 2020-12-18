@@ -59,6 +59,12 @@
     <Compile Include="Forms\frmAbonnement.Designer.cs">
       <DependentUpon>frmAbonnement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAjoutDependant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAjoutDependant.Designer.cs">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAbonnement.resx">
       <DependentUpon>frmAbonnement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAjoutDependant.resx">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConnexion.resx">
       <DependentUpon>frmConnexion.cs</DependentUpon>

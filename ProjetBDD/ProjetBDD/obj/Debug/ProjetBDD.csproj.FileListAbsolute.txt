@@ -21,3 +21,4 @@ C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\ProjetBDD\Proje
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.csproj.CoreCompileInputs.cache
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.exe
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.pdb
+C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.frmAjoutDependant.resources

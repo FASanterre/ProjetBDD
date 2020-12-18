@@ -14,6 +14,7 @@ namespace ProjetBDD.Forms
     public partial class frmAbonnement : Form
     {
         DataClassProjetBDDDataContext contexte = new DataClassProjetBDDDataContext();
+        frmAjoutDependant frmDep = new frmAjoutDependant();
         public frmAbonnement()
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace ProjetBDD.Forms
                 errMessage.SetError(tbNoCivique, "Vous devez entrer un numéro civique");
                 e.Cancel = true;
             }
-            else if (int.TryParse(tbNoCivique.Text.Trim(), out val))
+            else if (!int.TryParse(tbNoCivique.Text.Trim(), out val))
             {
                 errMessage.SetError(tbNoCivique, "Le numéro civique doit être un nombre entier");
                 e.Cancel = true;
@@ -131,14 +132,14 @@ namespace ProjetBDD.Forms
 
         private void tbTelephone_Validating(object sender, CancelEventArgs e)
         {
-            if (tbCell.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "").Trim().Length < 10)
+            if (tbTelephone.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "").Trim().Length < 10)
             {
-                errMessage.SetError(tbCell, "Le numéro de Téléphone doit être dans un format (999)999-9999");
+                errMessage.SetError(tbTelephone, "Le numéro de Téléphone doit être dans un format (999)999-9999");
                 e.Cancel = true;
             }
             else
             {
-                errMessage.SetError(tbCell, string.Empty);
+                errMessage.SetError(tbTelephone, string.Empty);
             }
         }
 
@@ -223,7 +224,7 @@ namespace ProjetBDD.Forms
 
         private void tbCell_Validating(object sender, CancelEventArgs e)
         {
-            if(tbCell.Text.Trim().Length > 0)
+            if(tbCell.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "").Trim().Length > 0)
             {
                 if(tbCell.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "").Trim().Length < 10)
                 {
@@ -234,6 +235,10 @@ namespace ProjetBDD.Forms
                 {
                     errMessage.SetError(tbCell, string.Empty);
                 }
+            }
+            else
+            {
+                errMessage.SetError(tbCell, string.Empty);
             }
         }
 
@@ -306,12 +311,30 @@ namespace ProjetBDD.Forms
                 {
                     try
                     {
-                        contexte.SubmitChanges();
+                        //contexte.SubmitChanges();
                         MessageBox.Show("L'abonnement " + abonnement.Id + " a été ajouté avec success", "Ajout abonnement");
+                        for(var i = 0; i < nbDependants; i++)
+                        {
+                            if(i == 0)
+                            {
+                                frmDep.majeur = true;
+                                frmDep.lblTitre = "Ajout dépendant (conjoint/conjointe)";
+                            }
+                            else
+                            {
+                                frmDep.majeur = false;
+                                frmDep.lblTitre = "Ajout dépendant (enfant)";
+                            }
+                            frmDep.idAbonnement = abonnement.Id;
+                            frmDep.numDependant = i;
+                            this.Hide();
+                            frmDep.ShowDialog();
+                            this.Show();
+                        }
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erreur");
+                        //MessageBox.Show(ex.Message, "Erreur");
                     }
                 }
             }
