@@ -53,6 +53,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Abonnement\frmAbonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Abonnement\frmAbonnement.Designer.cs">
+      <DependentUpon>frmAbonnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Abonnement\frmAjoutDependant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Abonnement\frmAjoutDependant.Designer.cs">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="NoEtTypeEmploye.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Abonnement\frmAbonnement.resx">
+      <DependentUpon>frmAbonnement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Abonnement\frmAjoutDependant.resx">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConnexion.resx">
       <DependentUpon>frmConnexion.cs</DependentUpon>
     </EmbeddedResource>

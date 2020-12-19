@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetBDD.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
+        frmAbonnement frmAbonnement = new frmAbonnement();
         Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
         Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
         Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
@@ -89,6 +91,12 @@ namespace ProjetBDD
             Environment.Exit(0);
         }
 
+        private void miAbonnement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAbonnement.ShowDialog();
+            this.Show();
+        }
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
