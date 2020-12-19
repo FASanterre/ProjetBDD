@@ -12,6 +12,9 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
+        Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
+        Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
+        Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -19,6 +22,15 @@ namespace ProjetBDD
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            miGestionEmploye.Visible = false;
+            miAbonnement.Visible = false;
+            miReabonnement.Visible = false;
+            miMAJAbonnes.Visible = false;
+            miModifPrixDepenses.Visible = false;
+            miInscriptionDepense.Visible = false;
+            miInscriptionPartie.Visible = false;
+            miVisualisation.Visible = false;
+
             switch (frmConnexion.TypeEmploye)
             {
                 case 1:
@@ -75,6 +87,27 @@ namespace ProjetBDD
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAjoutEmploye.ShowDialog();
+            this.Show();
+        }
+
+        private void suppressionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSuppressionEmploye.ShowDialog();
+            this.Show();
+        }
+
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmModificationEmploye.ShowDialog();
+            this.Show();
         }
     }
 }

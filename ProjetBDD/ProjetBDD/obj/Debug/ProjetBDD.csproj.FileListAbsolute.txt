@@ -9,3 +9,6 @@ E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.pdb
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.frmMenuPrincipal.resources
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.frmConnexion.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.GestionEmploye.frmSuppressionEmploye.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.GestionEmploye.frmAjoutEmploye.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.GestionEmploye.frmModificationEmploye.resources

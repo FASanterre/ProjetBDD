@@ -31,6 +31,9 @@ namespace ProjetBDD
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.miGestionEmploye = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suppressionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miAbonnement = new System.Windows.Forms.ToolStripMenuItem();
             this.miReabonnement = new System.Windows.Forms.ToolStripMenuItem();
             this.miMAJAbonnes = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,9 +43,6 @@ namespace ProjetBDD
             this.miVisualisation = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeconnexion = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suppressionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,27 @@ namespace ProjetBDD
             this.miGestionEmploye.Name = "miGestionEmploye";
             this.miGestionEmploye.Size = new System.Drawing.Size(134, 20);
             this.miGestionEmploye.Text = "Gestion des employés";
+            // 
+            // ajoutToolStripMenuItem
+            // 
+            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
+            // 
+            // modificationToolStripMenuItem
+            // 
+            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
+            // 
+            // suppressionToolStripMenuItem
+            // 
+            this.suppressionToolStripMenuItem.Name = "suppressionToolStripMenuItem";
+            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.suppressionToolStripMenuItem.Text = "Suppression";
+            this.suppressionToolStripMenuItem.Click += new System.EventHandler(this.suppressionToolStripMenuItem_Click);
             // 
             // miAbonnement
             // 
@@ -134,24 +155,6 @@ namespace ProjetBDD
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
-            // 
-            // ajoutToolStripMenuItem
-            // 
-            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ajoutToolStripMenuItem.Text = "Ajout";
-            // 
-            // modificationToolStripMenuItem
-            // 
-            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificationToolStripMenuItem.Text = "Modification";
-            // 
-            // suppressionToolStripMenuItem
-            // 
-            this.suppressionToolStripMenuItem.Name = "suppressionToolStripMenuItem";
-            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.suppressionToolStripMenuItem.Text = "Suppression";
             // 
             // frmMenuPrincipal
             // 
