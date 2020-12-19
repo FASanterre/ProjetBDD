@@ -15,6 +15,7 @@ namespace ProjetBDD.Forms
     {
         DataClassProjetBDDDataContext contexte = new DataClassProjetBDDDataContext();
         frmAjoutDependant frmDep = new frmAjoutDependant();
+        public List<Dependant> listDep = new List<Dependant>();
         public frmAbonnement()
         {
             InitializeComponent();
@@ -311,9 +312,9 @@ namespace ProjetBDD.Forms
                 {
                     try
                     {
-                        //contexte.SubmitChanges();
+                        contexte.SubmitChanges();
                         MessageBox.Show("L'abonnement " + abonnement.Id + " a été ajouté avec success", "Ajout abonnement");
-                        for(var i = 0; i < nbDependants; i++)
+                        for (var i = 0; i < nbDependants; i++)
                         {
                             if(i == 0)
                             {
@@ -331,10 +332,17 @@ namespace ProjetBDD.Forms
                             frmDep.ShowDialog();
                             this.Show();
                         }
+                        foreach (var dep in listDep)
+                        {
+                            contexte.Dependants.InsertOnSubmit(dep);
+                        }
+                        contexte.SubmitChanges();
+                        MessageBox.Show("Les dépendants pour l'abonnement " + abonnement.Id + " ont été ajoutés avec succès", "Ajout abonnement");
+                        transac.Complete();
                     }
                     catch(Exception ex)
                     {
-                        //MessageBox.Show(ex.Message, "Erreur");
+                        MessageBox.Show(ex.Message, "Erreur");
                     }
                 }
             }
