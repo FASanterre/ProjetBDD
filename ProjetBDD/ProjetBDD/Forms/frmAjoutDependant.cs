@@ -19,7 +19,7 @@ namespace ProjetBDD.Forms
         public int numDependant = -1;
         bool fermer = false;
         DataClassProjetBDDDataContext contexte = new DataClassProjetBDDDataContext();
-        frmAbonnement frmAbonnement = new frmAbonnement();
+        public frmAbonnement frmAbon = null;
         public frmAjoutDependant()
         {
             InitializeComponent();
@@ -31,6 +31,7 @@ namespace ProjetBDD.Forms
             if (majeur)
             {
                 dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+                dtpDateNaissance.MinDate = DateTime.Parse("1753-01-01");
             }
             else
             {
@@ -122,7 +123,7 @@ namespace ProjetBDD.Forms
                     IdAbonnement = idAbonnement,
                     Remarque = tbRemarques.Text.Trim()
                 };
-                frmAbonnement.listDep.Add(dep);
+                frmAbon.listDep.Add(dep);
                 //contexte.Dependants.InsertOnSubmit(dep);
 
                 //using (var maTransac = new TransactionScope())

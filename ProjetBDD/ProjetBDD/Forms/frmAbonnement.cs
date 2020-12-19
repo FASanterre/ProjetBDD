@@ -176,17 +176,26 @@ namespace ProjetBDD.Forms
                                   where type.Description == (string)cbTypeAbonnement.SelectedItem
                                   select type).SingleOrDefault();
 
-            if (typeAbonnement != null && typeAbonnement.No == 2)
+            if(typeAbonnement != null)
             {
-                lblNbEnfants.Visible = false;
-                nudNbEnfants.Visible = false;
-                dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-60);
-            }
-            else if(typeAbonnement.No == 6)
-            {
-                lblNbEnfants.Visible = true;
-                nudNbEnfants.Visible = true;
-                dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+                if (typeAbonnement.No == 2)
+                {
+                    lblNbEnfants.Visible = false;
+                    nudNbEnfants.Visible = false;
+                    dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-60);
+                }
+                else if (typeAbonnement.No == 6)
+                {
+                    lblNbEnfants.Visible = true;
+                    nudNbEnfants.Visible = true;
+                    dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+                }
+                else
+                {
+                    lblNbEnfants.Visible = false;
+                    nudNbEnfants.Visible = false;
+                    dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+                }
             }
             else
             {
@@ -221,6 +230,8 @@ namespace ProjetBDD.Forms
             }
 
             dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+
+            listDep = new List<Dependant>();
         }
 
         private void tbCell_Validating(object sender, CancelEventArgs e)
@@ -328,6 +339,7 @@ namespace ProjetBDD.Forms
                             }
                             frmDep.idAbonnement = abonnement.Id;
                             frmDep.numDependant = i;
+                            frmDep.frmAbon = this;
                             this.Hide();
                             frmDep.ShowDialog();
                             this.Show();
@@ -345,6 +357,22 @@ namespace ProjetBDD.Forms
                         MessageBox.Show(ex.Message, "Erreur");
                     }
                 }
+                tbNom.Clear();
+                tbPrenom.Clear();
+                cbSexe.SelectedItem = null;
+                dtpDateNaissance.Value = dtpDateNaissance.MaxDate;
+                tbNoCivique.Clear();
+                tbCodePostal.Clear();
+                tbCell.Clear();
+                cbProvince.SelectedItem = null;
+                tbCourriel.Clear();
+                tbRemarque.Clear();
+                tbTelephone.Clear();
+                nudNbEnfants.Value = nudNbEnfants.Minimum;
+                tbVille.Clear();
+                tbRue.Clear();
+                cbTypeAbonnement.SelectedItem = null;
+                this.Close();
             }
         }
     }
