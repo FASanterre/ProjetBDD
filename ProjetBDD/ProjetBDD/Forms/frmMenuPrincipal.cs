@@ -13,7 +13,13 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
+<<<<<<< HEAD
         frmAbonnement frmAbonnement = new frmAbonnement();
+=======
+        Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
+        Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
+        Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
+>>>>>>> 7349b779b0c0eb90f909c2e0e002566543ceb2f7
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -21,6 +27,15 @@ namespace ProjetBDD
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            miGestionEmploye.Visible = false;
+            miAbonnement.Visible = false;
+            miReabonnement.Visible = false;
+            miMAJAbonnes.Visible = false;
+            miModifPrixDepenses.Visible = false;
+            miInscriptionDepense.Visible = false;
+            miInscriptionPartie.Visible = false;
+            miVisualisation.Visible = false;
+
             switch (frmConnexion.TypeEmploye)
             {
                 case 1:
@@ -79,10 +94,31 @@ namespace ProjetBDD
             Environment.Exit(0);
         }
 
+<<<<<<< HEAD
         private void miAbonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmAbonnement.ShowDialog();
+=======
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAjoutEmploye.ShowDialog();
+            this.Show();
+        }
+
+        private void suppressionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSuppressionEmploye.ShowDialog();
+            this.Show();
+        }
+
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmModificationEmploye.ShowDialog();
+>>>>>>> 7349b779b0c0eb90f909c2e0e002566543ceb2f7
             this.Show();
         }
     }
