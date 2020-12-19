@@ -199,6 +199,7 @@ namespace ProjetBDD.Forms.GestionEmploye
                         context.SubmitChanges();
                         MessageBox.Show($"L'employé {noID} a été ajouté. ", "Ajout de l'employé");
                         porteeTransaction.Complete();
+                        this.Hide();
                     }catch(Exception ex)
                     {
                         MessageBox.Show(ex.Message, " Impossible de modifier la base de données");

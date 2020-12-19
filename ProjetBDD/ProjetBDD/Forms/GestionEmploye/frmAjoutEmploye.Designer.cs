@@ -327,6 +327,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             // 
             // nudSalaire
             // 
+            this.nudSalaire.DecimalPlaces = 2;
             this.nudSalaire.Increment = new decimal(new int[] {
             1,
             0,

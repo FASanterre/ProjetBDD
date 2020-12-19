@@ -22,6 +22,15 @@ namespace ProjetBDD
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            miGestionEmploye.Visible = false;
+            miAbonnement.Visible = false;
+            miReabonnement.Visible = false;
+            miMAJAbonnes.Visible = false;
+            miModifPrixDepenses.Visible = false;
+            miInscriptionDepense.Visible = false;
+            miInscriptionPartie.Visible = false;
+            miVisualisation.Visible = false;
+
             switch (frmConnexion.TypeEmploye)
             {
                 case 1:

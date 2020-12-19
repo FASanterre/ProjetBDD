@@ -32,6 +32,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.components = new System.ComponentModel.Container();
             this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,8 @@ namespace ProjetBDD.Forms.GestionEmploye
             // 
             // employeDataGridView
             // 
+            this.employeDataGridView.AllowUserToAddRows = false;
+            this.employeDataGridView.AllowUserToDeleteRows = false;
             this.employeDataGridView.AutoGenerateColumns = false;
             this.employeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -78,17 +80,31 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn17});
             this.employeDataGridView.DataSource = this.employeBindingSource;
             this.employeDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.employeDataGridView.MultiSelect = false;
             this.employeDataGridView.Name = "employeDataGridView";
+            this.employeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeDataGridView.Size = new System.Drawing.Size(943, 426);
             this.employeDataGridView.TabIndex = 1;
             this.employeDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeDataGridView_CellEndEdit);
             this.employeDataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.employeDataGridView_CellValidating);
+            this.employeDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.employeDataGridView_DataError);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 456);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(365, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Enregistrer les modifications apportées";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Nom";
             this.dataGridViewTextBoxColumn3.HeaderText = "Nom";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -107,6 +123,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Sexe";
             this.dataGridViewTextBoxColumn5.HeaderText = "Sexe";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -174,16 +191,6 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn17.HeaderText = "Remarque";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(317, 456);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(365, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Enregistrer les modifications apportées";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmModificationEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +200,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.Controls.Add(this.employeDataGridView);
             this.Name = "frmModificationEmploye";
             this.Text = "frmModificationEmploye";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmModificationEmploye_FormClosing);
             this.Load += new System.EventHandler(this.frmModificationEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).EndInit();
@@ -204,6 +212,7 @@ namespace ProjetBDD.Forms.GestionEmploye
 
         private System.Windows.Forms.BindingSource employeBindingSource;
         private System.Windows.Forms.DataGridView employeDataGridView;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -219,6 +228,5 @@ namespace ProjetBDD.Forms.GestionEmploye
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.Button button1;
     }
 }

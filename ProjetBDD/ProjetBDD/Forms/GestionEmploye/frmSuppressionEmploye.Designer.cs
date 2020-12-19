@@ -31,14 +31,14 @@ namespace ProjetBDD.Forms.GestionEmploye
         {
             this.components = new System.ComponentModel.Container();
             this.employeDataGridView = new System.Windows.Forms.DataGridView();
-            this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSupprimer = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProvince = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSupprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -64,19 +64,6 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.employeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeDataGridView.Size = new System.Drawing.Size(825, 255);
             this.employeDataGridView.TabIndex = 1;
-            // 
-            // employeBindingSource
-            // 
-            this.employeBindingSource.DataSource = typeof(ProjetBDD.Employe);
-            // 
-            // btnSupprimer
-            // 
-            this.btnSupprimer.Location = new System.Drawing.Point(285, 295);
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(254, 40);
-            this.btnSupprimer.TabIndex = 2;
-            this.btnSupprimer.Text = "Supprimer l\'employé sélectionné";
-            this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -124,6 +111,20 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.IdProvince.HeaderText = "IdProvince";
             this.IdProvince.Name = "IdProvince";
             this.IdProvince.ReadOnly = true;
+            // 
+            // employeBindingSource
+            // 
+            this.employeBindingSource.DataSource = typeof(ProjetBDD.Employe);
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Location = new System.Drawing.Point(285, 295);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(254, 40);
+            this.btnSupprimer.TabIndex = 2;
+            this.btnSupprimer.Text = "Supprimer l\'employé sélectionné";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // frmSuppressionEmploye
             // 
