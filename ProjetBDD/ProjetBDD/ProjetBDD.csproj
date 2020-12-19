@@ -53,17 +53,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAbonnement.cs">
+    <Compile Include="Forms\Abonnement\frmAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAbonnement.Designer.cs">
+    <Compile Include="Forms\Abonnement\frmAbonnement.Designer.cs">
       <DependentUpon>frmAbonnement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAjoutDependant.cs">
+    <Compile Include="Forms\Abonnement\frmAjoutDependant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAjoutDependant.Designer.cs">
+    <Compile Include="Forms\Abonnement\frmAjoutDependant.Designer.cs">
       <DependentUpon>frmAjoutDependant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.Designer.cs">
+      <DependentUpon>frmAjoutEmploye.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConnexion.cs">
       <SubType>Form</SubType>
@@ -77,12 +83,26 @@
     <Compile Include="Forms\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GestionEmploye\frmModificationEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GestionEmploye\frmModificationEmploye.Designer.cs">
+      <DependentUpon>frmModificationEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.Designer.cs">
+      <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdEtNomProvince.cs" />
+    <Compile Include="NoEtTypeEmploye.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmAbonnement.resx">
+    <EmbeddedResource Include="Forms\Abonnement\frmAbonnement.resx">
       <DependentUpon>frmAbonnement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAjoutDependant.resx">
+    <EmbeddedResource Include="Forms\Abonnement\frmAjoutDependant.resx">
       <DependentUpon>frmAjoutDependant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConnexion.resx">
@@ -90,6 +110,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GestionEmploye\frmAjoutEmploye.resx">
+      <DependentUpon>frmAjoutEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GestionEmploye\frmModificationEmploye.resx">
+      <DependentUpon>frmModificationEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GestionEmploye\frmSuppressionEmploye.resx">
+      <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +137,9 @@
     <None Include="DataClassProjetBDD.dbml.layout">
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Employe.datasource" />
+    <None Include="Properties\DataSources\IdEtNomProvince.datasource" />
+    <None Include="Properties\DataSources\NoEtTypeEmploye.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
