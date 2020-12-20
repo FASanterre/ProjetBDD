@@ -99,6 +99,7 @@ namespace ProjetBDD
             this.miAbonnement.Name = "miAbonnement";
             this.miAbonnement.Size = new System.Drawing.Size(89, 20);
             this.miAbonnement.Text = "Abonnement";
+            this.miAbonnement.Click += new System.EventHandler(this.miAbonnement_Click);
             // 
             // miReabonnement
             // 

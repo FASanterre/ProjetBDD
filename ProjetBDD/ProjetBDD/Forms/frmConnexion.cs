@@ -51,5 +51,11 @@ namespace ProjetBDD
                 lblErreur.Text = "Erreur : Authentification";
             }
         }
+
+        private void frmConnexion_Load(object sender, EventArgs e)
+        {
+            tbID.Text = "1";
+            tbMotDePasse.Text = "Password1$";
+        }
     }
 }

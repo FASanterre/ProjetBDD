@@ -122,6 +122,7 @@ namespace ProjetBDD
             this.Controls.Add(this.label1);
             this.Name = "frmConnexion";
             this.Text = "Connexion au système";
+            this.Load += new System.EventHandler(this.frmConnexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
