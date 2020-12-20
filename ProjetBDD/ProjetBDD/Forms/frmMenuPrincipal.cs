@@ -13,20 +13,10 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        frmAbonnement frmAbonnement = new frmAbonnement();
-=======
         Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
         Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
         Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
->>>>>>> 7349b779b0c0eb90f909c2e0e002566543ceb2f7
-=======
         frmAbonnement frmAbonnement = new frmAbonnement();
-        Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
-        Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
-        Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
->>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -100,21 +90,12 @@ namespace ProjetBDD
         {
             Environment.Exit(0);
         }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
         private void miAbonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmAbonnement.ShowDialog();
-<<<<<<< HEAD
-=======
-=======
             this.Show();
         }
->>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -133,10 +114,6 @@ namespace ProjetBDD
         {
             this.Hide();
             frmModificationEmploye.ShowDialog();
-<<<<<<< HEAD
->>>>>>> 7349b779b0c0eb90f909c2e0e002566543ceb2f7
-=======
->>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
             this.Show();
         }
     }
