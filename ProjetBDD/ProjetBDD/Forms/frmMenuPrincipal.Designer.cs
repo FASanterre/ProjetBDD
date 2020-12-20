@@ -118,6 +118,7 @@ namespace ProjetBDD
             this.miModifPrixDepenses.Name = "miModifPrixDepenses";
             this.miModifPrixDepenses.Size = new System.Drawing.Size(164, 20);
             this.miModifPrixDepenses.Text = "Modification prix/dépenses";
+            this.miModifPrixDepenses.Click += new System.EventHandler(this.miModifPrixDepenses_Click);
             // 
             // miInscriptionPartie
             // 

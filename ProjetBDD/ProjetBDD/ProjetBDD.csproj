@@ -54,6 +54,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DescriptionEtTypeAbonnement.cs" />
     <Compile Include="Forms\Abonnement\frmAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +97,12 @@
     <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.Designer.cs">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.Designer.cs">
+      <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="IdEtNomProvince.cs" />
     <Compile Include="NoEtTypeEmploye.cs" />
     <Compile Include="Program.cs" />
@@ -121,6 +128,9 @@
     <EmbeddedResource Include="Forms\GestionEmploye\frmSuppressionEmploye.resx">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModificationPrix\modificationPrixDepenses.resx">
+      <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -142,6 +152,7 @@
     <None Include="Properties\DataSources\DataClassProjetBDDDataContext.datasource" />
     <None Include="Properties\DataSources\Dependant.datasource" />
     <None Include="Properties\DataSources\Depense.datasource" />
+    <None Include="Properties\DataSources\DescriptionEtTypeAbonnement.datasource" />
     <None Include="Properties\DataSources\Employe.datasource" />
     <None Include="Properties\DataSources\frmConnexion.datasource" />
     <None Include="Properties\DataSources\frmMenuPrincipal.datasource" />
@@ -156,6 +167,7 @@
     <None Include="Properties\DataSources\Terrain.datasource" />
     <None Include="Properties\DataSources\TypesAbonnement.datasource" />
     <None Include="Properties\DataSources\TypesEmploye.datasource" />
+    <None Include="Properties\DataSources\PrixDepensesAbonnement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

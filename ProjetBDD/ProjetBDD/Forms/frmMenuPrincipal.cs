@@ -13,10 +13,11 @@ namespace ProjetBDD
 {
     public partial class frmMenuPrincipal : Form
     {
+        frmAbonnement frmAbonnement = new frmAbonnement();
         Forms.GestionEmploye.frmSuppressionEmploye frmSuppressionEmploye = new Forms.GestionEmploye.frmSuppressionEmploye();
         Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
         Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
-        frmAbonnement frmAbonnement = new frmAbonnement();
+        Forms.ModificationPrix.modificationPrixDepenses frmModifPrixDepenses = new Forms.ModificationPrix.modificationPrixDepenses();
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -114,6 +115,13 @@ namespace ProjetBDD
         {
             this.Hide();
             frmModificationEmploye.ShowDialog();
+            this.Show();
+        }
+
+        private void miModifPrixDepenses_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmModifPrixDepenses.ShowDialog();
             this.Show();
         }
     }
