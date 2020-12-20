@@ -8,9 +8,9 @@ namespace ProjetBDD
 {
     class DescriptionEtTypeAbonnement
     {
-        public string Description { get; private set; }
-        public double Prix { get; private set; }
-        public double Depenses { get; private set; }
+        public string Description { get; set; }
+        public double Prix { get; set; }
+        public double Depenses { get; set; }
 
         public DescriptionEtTypeAbonnement(string description, double prix, double depenses)
         {
