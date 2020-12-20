@@ -18,6 +18,7 @@ namespace ProjetBDD
         Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
         Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
         Forms.ModificationPrix.modificationPrixDepenses frmModifPrixDepenses = new Forms.ModificationPrix.modificationPrixDepenses();
+        
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -91,7 +92,6 @@ namespace ProjetBDD
         {
             Environment.Exit(0);
         }
-
         private void miAbonnement_Click(object sender, EventArgs e)
         {
             this.Hide();

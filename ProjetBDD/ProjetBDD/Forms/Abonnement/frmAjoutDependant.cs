@@ -19,6 +19,7 @@ namespace ProjetBDD.Forms
         public int numDependant = -1;
         bool fermer = false;
         DataClassProjetBDDDataContext contexte = new DataClassProjetBDDDataContext();
+        public frmAbonnement frmAbon = null;
         public frmAjoutDependant()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace ProjetBDD.Forms
             if (majeur)
             {
                 dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
+                dtpDateNaissance.MinDate = DateTime.Parse("1753-01-01");
             }
             else
             {
@@ -121,20 +123,27 @@ namespace ProjetBDD.Forms
                     IdAbonnement = idAbonnement,
                     Remarque = tbRemarques.Text.Trim()
                 };
-                contexte.Dependants.InsertOnSubmit(dep);
+                frmAbon.listDep.Add(dep);
+                //contexte.Dependants.InsertOnSubmit(dep);
 
-                using (var transac = new TransactionScope())
-                {
-                    try
-                    {
-                        contexte.SubmitChanges();
-                        MessageBox.Show("Le dépendant " + dep.Id + " a été ajouté avec success", "Ajout Dépendant");
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Erreur");
-                    }
-                }
+                //using (var maTransac = new TransactionScope())
+                //{
+                //    try
+                //    {
+                //        contexte.SubmitChanges();
+                //        MessageBox.Show("Le dépendant " + dep.Id + " a été ajouté avec success", "Ajout Dépendant");
+                //        maTransac.Complete();
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MessageBox.Show(ex.Message, "Erreur");
+                //    }
+                //}
+                tbNom.Clear();
+                tbPrenom.Clear();
+                cbSexe.SelectedItem = null;
+                dtpDateNaissance.Value = dtpDateNaissance.MaxDate;
+                tbRemarques.Clear();
                 fermer = true;
                 this.Close();
             }
