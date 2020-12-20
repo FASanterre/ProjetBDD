@@ -53,7 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="Forms\frmAbonnement.cs">
+=======
     <Compile Include="Forms\Abonnement\frmAbonnement.cs">
+>>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Abonnement\frmAbonnement.Designer.cs">
@@ -64,12 +69,20 @@
     </Compile>
     <Compile Include="Forms\Abonnement\frmAjoutDependant.Designer.cs">
       <DependentUpon>frmAjoutDependant.cs</DependentUpon>
+<<<<<<< HEAD
+=======
+=======
     </Compile>
+>>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
     <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.Designer.cs">
       <DependentUpon>frmAjoutEmploye.cs</DependentUpon>
+<<<<<<< HEAD
+>>>>>>> 7349b779b0c0eb90f909c2e0e002566543ceb2f7
+=======
+>>>>>>> f40e29522cf7fa3bf8755f9354cd59fe4abb92d5
     </Compile>
     <Compile Include="Forms\frmConnexion.cs">
       <SubType>Form</SubType>
