@@ -53,6 +53,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DescriptionEtTypeAbonnement.cs" />
     <Compile Include="Forms\Abonnement\frmAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,12 @@
     <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.Designer.cs">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.Designer.cs">
+      <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="IdEtNomProvince.cs" />
     <Compile Include="NoEtTypeEmploye.cs" />
     <Compile Include="Program.cs" />
@@ -120,6 +127,9 @@
     <EmbeddedResource Include="Forms\GestionEmploye\frmSuppressionEmploye.resx">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModificationPrix\modificationPrixDepenses.resx">
+      <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -137,9 +147,11 @@
     <None Include="DataClassProjetBDD.dbml.layout">
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\DescriptionEtTypeAbonnement.datasource" />
     <None Include="Properties\DataSources\Employe.datasource" />
     <None Include="Properties\DataSources\IdEtNomProvince.datasource" />
     <None Include="Properties\DataSources\NoEtTypeEmploye.datasource" />
+    <None Include="Properties\DataSources\PrixDepensesAbonnement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

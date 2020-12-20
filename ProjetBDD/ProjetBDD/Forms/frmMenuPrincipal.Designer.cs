@@ -76,21 +76,21 @@ namespace ProjetBDD
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
             this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
             this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // suppressionToolStripMenuItem
             // 
             this.suppressionToolStripMenuItem.Name = "suppressionToolStripMenuItem";
-            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.suppressionToolStripMenuItem.Text = "Suppression";
             this.suppressionToolStripMenuItem.Click += new System.EventHandler(this.suppressionToolStripMenuItem_Click);
             // 
@@ -118,6 +118,7 @@ namespace ProjetBDD
             this.miModifPrixDepenses.Name = "miModifPrixDepenses";
             this.miModifPrixDepenses.Size = new System.Drawing.Size(164, 20);
             this.miModifPrixDepenses.Text = "Modification prix/dépenses";
+            this.miModifPrixDepenses.Click += new System.EventHandler(this.miModifPrixDepenses_Click);
             // 
             // miInscriptionPartie
             // 

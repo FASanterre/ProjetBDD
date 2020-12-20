@@ -44,3 +44,6 @@ C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\nouv version\Pr
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\nouv version\ProjetBDD\ProjetBDD\ProjetBDD\bin\Debug\ProjetBDD.exe.config
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\nouv version\ProjetBDD\ProjetBDD\ProjetBDD\bin\Debug\ProjetBDD.exe
 C:\Users\phile\OneDrive\Documents\Automne 2020\Base de donnée 3\nouv version\ProjetBDD\ProjetBDD\ProjetBDD\bin\Debug\ProjetBDD.pdb
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.frmAbonnement.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.frmAjoutDependant.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.ModificationPrix.modificationPrixDepenses.resources

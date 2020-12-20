@@ -311,7 +311,7 @@ namespace ProjetBDD.Forms
                 {
                     try
                     {
-                        //contexte.SubmitChanges();
+                        contexte.SubmitChanges();
                         MessageBox.Show("L'abonnement " + abonnement.Id + " a été ajouté avec success", "Ajout abonnement");
                         for(var i = 0; i < nbDependants; i++)
                         {
