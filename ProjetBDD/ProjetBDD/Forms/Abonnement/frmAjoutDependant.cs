@@ -123,7 +123,6 @@ namespace ProjetBDD.Forms
                     IdAbonnement = idAbonnement,
                     Remarque = tbRemarques.Text.Trim()
                 };
-                frmAbon.listDep.Add(dep);
                 //contexte.Dependants.InsertOnSubmit(dep);
 
                 //using (var maTransac = new TransactionScope())

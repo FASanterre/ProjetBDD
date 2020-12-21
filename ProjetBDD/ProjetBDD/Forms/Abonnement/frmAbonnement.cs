@@ -13,9 +13,10 @@ namespace ProjetBDD.Forms
 {
     public partial class frmAbonnement : Form
     {
-        DataClassProjetBDDDataContext contexte = new DataClassProjetBDDDataContext();
-        frmAjoutDependant frmDep = new frmAjoutDependant();
-        public List<Dependant> listDep = new List<Dependant>();
+        DataClassProjetBDDDataContext context = new DataClassProjetBDDDataContext();
+        public int nbrDependantsAjoute = 0;
+        public int nbDependants = -1;
+        public string idAbonnement = "";
         public frmAbonnement()
         {
             InitializeComponent();
@@ -172,7 +173,7 @@ namespace ProjetBDD.Forms
 
         private void cbTypeAbonnement_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var typeAbonnement = (from type in contexte.TypesAbonnements
+            var typeAbonnement = (from type in context.TypesAbonnements
                                   where type.Description == (string)cbTypeAbonnement.SelectedItem
                                   select type).SingleOrDefault();
 
@@ -207,7 +208,7 @@ namespace ProjetBDD.Forms
 
         private void frmAbonnement_Load(object sender, EventArgs e)
         {
-            var provinces = from prov in contexte.Provinces
+            var provinces = from prov in context.Provinces
                             select prov;
 
             if(cbProvince.Items.Count == 0)
@@ -218,7 +219,7 @@ namespace ProjetBDD.Forms
                 }
             }
 
-            var typeAbonnements = from type in contexte.TypesAbonnements
+            var typeAbonnements = from type in context.TypesAbonnements
                             select type;
 
             if (cbTypeAbonnement.Items.Count == 0)
@@ -230,8 +231,10 @@ namespace ProjetBDD.Forms
             }
 
             dtpDateNaissance.MaxDate = DateTime.Now.AddYears(-18);
-
-            listDep = new List<Dependant>();
+            cbProvince.SelectedIndex = 0;
+            cbSexe.SelectedIndex = 0;
+            cbSexeDep.SelectedIndex = 0;
+            cbTypeAbonnement.SelectedIndex = 0;
         }
 
         private void tbCell_Validating(object sender, CancelEventArgs e)
@@ -256,9 +259,9 @@ namespace ProjetBDD.Forms
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren())
+            if (ValidateChildren(ValidationConstraints.ImmediateChildren))
             {
-                var abonnements = from abon in contexte.Abonnements
+                var abonnements = from abon in context.Abonnements
                                               select abon;
 
                 int numId = abonnements.Count() + 1;
@@ -272,10 +275,10 @@ namespace ProjetBDD.Forms
                 {
                     sexe = 'F';
                 }
-                var type = (from typ in contexte.TypesAbonnements
+                var type = (from typ in context.TypesAbonnements
                             where typ.Description == cbTypeAbonnement.SelectedItem.ToString()
                             select typ.No).SingleOrDefault();
-                int nbDependants = -1;
+                
                 switch (type)
                 {
                     case 1:
@@ -292,7 +295,7 @@ namespace ProjetBDD.Forms
                         nbDependants = 3;
                         break;
                     case 6:
-                        nbDependants = (int)nudNbEnfants.Value;
+                        nbDependants = (int)nudNbEnfants.Value + 1;
                         break;
                     default:
                         break;
@@ -317,62 +320,116 @@ namespace ProjetBDD.Forms
                     NoTypeAbonnement = type,
                     Remarque = tbRemarque.Text.Trim()
                 };
-                contexte.Abonnements.InsertOnSubmit(abonnement);
+                context.Abonnements.InsertOnSubmit(abonnement);
+                idAbonnement = abonnement.Id;
+                if (nbDependants == 0)
+                {
+                    using (var porteeTransaction = new TransactionScope())
+                    {
+                        try
+                        {
+                            context.SubmitChanges();
+                            MessageBox.Show($"Ajout réussi.", "Ajout de l'abonnement");
+                            porteeTransaction.Complete();
+                            this.Hide();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, " Impossible de modifier la base de données");
+                        }
+                    }
+                }
+                else
+                {
 
-                using (var transac = new TransactionScope())
+                    gbAjoutAbonnement.Enabled = false;
+                    gbAjoutAbonnement.Visible = false;
+                    if (nbDependants > 0)
+                    {
+                        lblDependantNb.Text = "Ajout conjoin/conjointe";
+                        gbDependants.Enabled = true;
+                        gbDependants.Visible = true;
+                        dtpDateNaissanceDep.MaxDate = DateTime.Now.AddYears(-18);
+                        dtpDateNaissanceDep.MinDate = DateTime.Parse("1753-01-01");
+                        
+                    }
+                }
+            }
+        }
+
+        private void btnAjouterDep_Click(object sender, EventArgs e)
+        {
+            bool isValid = true;
+            if(tbNomDep.Text.Trim() == "")
+            {
+                isValid = false;
+                MessageBox.Show("Erreur, le champs nom est vide");
+            }
+            else if(tbPrenomDep.Text.Trim() == "")
+            {
+                isValid = false;
+                MessageBox.Show("Erreur, le champs prénom est vide");
+            }
+            if (isValid)
+            {
+                nbrDependantsAjoute++;
+                lblDependantNb.Text = "Ajout du dépendant " + nbrDependantsAjoute;
+                var lien = idAbonnement.Substring(0, idAbonnement.Length - 1);
+
+                char sexe;
+                if (cbSexeDep.SelectedItem.ToString() == "Homme")
+                {
+                    sexe = 'H';
+                }
+                else
+                {
+                    sexe = 'F';
+                }
+
+                string id;
+                if (nbrDependantsAjoute - 1 == 0)
+                {
+                    id = lien + sexe + (nbrDependantsAjoute - 1);
+                }
+                else
+                {
+                    id = lien + "E" + (nbrDependantsAjoute - 1);
+                }
+
+                Dependant dep = new Dependant()
+                {
+                    Id = id,
+                    Nom = tbNom.Text.Trim(),
+                    Prenom = tbPrenom.Text.Trim(),
+                    Sexe = sexe,
+                    DateNaissance = dtpDateNaissance.Value,
+                    IdAbonnement = idAbonnement,
+                    Remarque = tbRemarqueDep.Text.Trim()
+                };
+                context.Dependants.InsertOnSubmit(dep);
+            }
+            tbNomDep.Clear();
+            tbPrenomDep.Clear();
+            cbSexeDep.SelectedIndex= 0;
+            dtpDateNaissanceDep.Value = dtpDateNaissanceDep.MaxDate;
+            tbRemarqueDep.Clear();
+
+            if (nbrDependantsAjoute == nbDependants)
+            {
+                using (var porteeTransaction = new TransactionScope())
                 {
                     try
                     {
-                        contexte.SubmitChanges();
-                        MessageBox.Show("L'abonnement " + abonnement.Id + " a été ajouté avec success", "Ajout abonnement");
-                        for (var i = 0; i < nbDependants; i++)
-                        {
-                            if(i == 0)
-                            {
-                                frmDep.majeur = true;
-                                frmDep.lblTitre = "Ajout dépendant (conjoint/conjointe)";
-                            }
-                            else
-                            {
-                                frmDep.majeur = false;
-                                frmDep.lblTitre = "Ajout dépendant (enfant)";
-                            }
-                            frmDep.idAbonnement = abonnement.Id;
-                            frmDep.numDependant = i;
-                            frmDep.frmAbon = this;
-                            this.Hide();
-                            frmDep.ShowDialog();
-                            this.Show();
-                        }
-                        foreach (var dep in listDep)
-                        {
-                            contexte.Dependants.InsertOnSubmit(dep);
-                        }
-                        contexte.SubmitChanges();
-                        MessageBox.Show("Les dépendants pour l'abonnement " + abonnement.Id + " ont été ajoutés avec succès", "Ajout abonnement");
-                        transac.Complete();
+                        context.SubmitChanges();
+                        MessageBox.Show($"Ajout réussi.", "Ajout de l'abonnement");
+                        porteeTransaction.Complete();
+                        this.Hide();
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erreur");
+                        MessageBox.Show(ex.Message, " Impossible de modifier la base de données");
                     }
                 }
-                tbNom.Clear();
-                tbPrenom.Clear();
-                cbSexe.SelectedItem = null;
-                dtpDateNaissance.Value = dtpDateNaissance.MaxDate;
-                tbNoCivique.Clear();
-                tbCodePostal.Clear();
-                tbCell.Clear();
-                cbProvince.SelectedItem = null;
-                tbCourriel.Clear();
-                tbRemarque.Clear();
-                tbTelephone.Clear();
-                nudNbEnfants.Value = nudNbEnfants.Minimum;
-                tbVille.Clear();
-                tbRue.Clear();
-                cbTypeAbonnement.SelectedItem = null;
-                this.Close();
             }
         }
     }
