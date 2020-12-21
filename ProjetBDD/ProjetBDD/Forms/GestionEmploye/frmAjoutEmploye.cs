@@ -199,6 +199,19 @@ namespace ProjetBDD.Forms.GestionEmploye
                         context.SubmitChanges();
                         MessageBox.Show($"L'employé {noID} a été ajouté. ", "Ajout de l'employé");
                         porteeTransaction.Complete();
+                        tbNom.Text = "";
+                        tbPrenom.Text = "";
+                        tbMDP.Text = "";
+                        nudAge.Value = 16;
+                        tbNumeroCivique.Text = "";
+                        tbRue.Text = "";
+                        tbVille.Text = "";
+                        tbCellulaire.Text = "";
+                        tbCodePostal.Text = "";
+                        tbTelephone.Text = "";
+                        tbCourriel.Text = "";
+                        nudSalaire.Value = 10;
+                        tbRemarque.Text = "";
                         this.Hide();
                     }catch(Exception ex)
                     {
@@ -206,6 +219,23 @@ namespace ProjetBDD.Forms.GestionEmploye
                     }
                 }
             }
+        }
+
+        private void frmAjoutEmploye_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            tbNom.Text = "";
+            tbPrenom.Text = "";
+            tbMDP.Text = "";
+            nudAge.Value = 16;
+            tbNumeroCivique.Text = "";
+            tbRue.Text = "";
+            tbVille.Text = "";
+            tbCellulaire.Text = "";
+            tbCodePostal.Text = "";
+            tbTelephone.Text = "";
+            tbCourriel.Text = "";
+            nudSalaire.Value = 10;
+            tbRemarque.Text = "";
         }
     }
 }

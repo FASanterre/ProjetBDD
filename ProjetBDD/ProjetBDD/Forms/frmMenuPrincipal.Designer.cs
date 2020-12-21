@@ -77,15 +77,15 @@ namespace ProjetBDD
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
             this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
             this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // suppressionToolStripMenuItem
             // 
@@ -125,12 +125,14 @@ namespace ProjetBDD
             this.miInscriptionPartie.Name = "miInscriptionPartie";
             this.miInscriptionPartie.Size = new System.Drawing.Size(148, 20);
             this.miInscriptionPartie.Text = "Inscription partie de golf";
+            this.miInscriptionPartie.Click += new System.EventHandler(this.miInscriptionPartie_Click);
             // 
             // miInscriptionDepense
             // 
             this.miInscriptionDepense.Name = "miInscriptionDepense";
             this.miInscriptionDepense.Size = new System.Drawing.Size(122, 20);
             this.miInscriptionDepense.Text = "Inscription dépense";
+            this.miInscriptionDepense.Click += new System.EventHandler(this.miInscriptionDepense_Click);
             // 
             // miVisualisation
             // 

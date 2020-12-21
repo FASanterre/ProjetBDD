@@ -96,6 +96,18 @@
     <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.Designer.cs">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InscriptionDepenses\frmInscrireDepenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InscriptionDepenses\frmInscrireDepenses.Designer.cs">
+      <DependentUpon>frmInscrireDepenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InscriptionPartie\frmInscrirePartie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InscriptionPartie\frmInscrirePartie.Designer.cs">
+      <DependentUpon>frmInscrirePartie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,7 @@
       <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
     </Compile>
     <Compile Include="IdEtNomProvince.cs" />
+    <Compile Include="NoEtNomTerrain.cs" />
     <Compile Include="NoEtTypeEmploye.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +140,12 @@
     <EmbeddedResource Include="Forms\GestionEmploye\frmSuppressionEmploye.resx">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InscriptionDepenses\frmInscrireDepenses.resx">
+      <DependentUpon>frmInscrireDepenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InscriptionPartie\frmInscrirePartie.resx">
+      <DependentUpon>frmInscrirePartie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ModificationPrix\modificationPrixDepenses.resx">
       <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,9 +166,11 @@
     <None Include="DataClassProjetBDD.dbml.layout">
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Abonnement.datasource" />
     <None Include="Properties\DataSources\DescriptionEtTypeAbonnement.datasource" />
     <None Include="Properties\DataSources\Employe.datasource" />
     <None Include="Properties\DataSources\IdEtNomProvince.datasource" />
+    <None Include="Properties\DataSources\NoEtNomTerrain.datasource" />
     <None Include="Properties\DataSources\NoEtTypeEmploye.datasource" />
     <None Include="Properties\DataSources\PrixDepensesAbonnement.datasource" />
     <None Include="Properties\DataSources\TypesAbonnement.datasource" />

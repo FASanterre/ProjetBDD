@@ -18,7 +18,10 @@ namespace ProjetBDD
         Forms.GestionEmploye.frmAjoutEmploye frmAjoutEmploye = new Forms.GestionEmploye.frmAjoutEmploye();
         Forms.GestionEmploye.frmModificationEmploye frmModificationEmploye = new Forms.GestionEmploye.frmModificationEmploye();
         Forms.ModificationPrix.modificationPrixDepenses frmModifPrixDepenses = new Forms.ModificationPrix.modificationPrixDepenses();
-        
+        Forms.InscriptionPartie.frmInscrirePartie frmInscrirePartie = new Forms.InscriptionPartie.frmInscrirePartie();
+        Forms.InscriptionDepenses.frmInscrireDepenses frmInscrireDepense = new Forms.InscriptionDepenses.frmInscrireDepenses();
+
+
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -123,6 +126,20 @@ namespace ProjetBDD
         {
             this.Hide();
             frmModifPrixDepenses.ShowDialog();
+            this.Show();
+        }
+
+        private void miInscriptionPartie_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInscrirePartie.ShowDialog();
+            this.Show();
+        }
+
+        private void miInscriptionDepense_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInscrireDepense.ShowDialog();
             this.Show();
         }
     }
