@@ -106,6 +106,7 @@ namespace ProjetBDD
             this.miReabonnement.Name = "miReabonnement";
             this.miReabonnement.Size = new System.Drawing.Size(100, 20);
             this.miReabonnement.Text = "Réabonnement";
+            this.miReabonnement.Click += new System.EventHandler(this.miReabonnement_Click);
             // 
             // miMAJAbonnes
             // 

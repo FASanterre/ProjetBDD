@@ -96,6 +96,12 @@
     <Compile Include="Forms\GestionEmploye\frmSuppressionEmploye.Designer.cs">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InscriptionDepenses\frmFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InscriptionDepenses\frmFacture.Designer.cs">
+      <DependentUpon>frmFacture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InscriptionDepenses\frmInscrireDepenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="Forms\ModificationPrix\modificationPrixDepenses.Designer.cs">
       <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rebonnement\frmReabonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rebonnement\frmReabonnement.Designer.cs">
+      <DependentUpon>frmReabonnement.cs</DependentUpon>
     </Compile>
     <Compile Include="IdEtNomProvince.cs" />
     <Compile Include="NoEtNomTerrain.cs" />
@@ -140,6 +152,9 @@
     <EmbeddedResource Include="Forms\GestionEmploye\frmSuppressionEmploye.resx">
       <DependentUpon>frmSuppressionEmploye.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InscriptionDepenses\frmFacture.resx">
+      <DependentUpon>frmFacture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InscriptionDepenses\frmInscrireDepenses.resx">
       <DependentUpon>frmInscrireDepenses.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ModificationPrix\modificationPrixDepenses.resx">
       <DependentUpon>modificationPrixDepenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rebonnement\frmReabonnement.resx">
+      <DependentUpon>frmReabonnement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

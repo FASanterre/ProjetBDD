@@ -20,7 +20,7 @@ namespace ProjetBDD
         Forms.ModificationPrix.modificationPrixDepenses frmModifPrixDepenses = new Forms.ModificationPrix.modificationPrixDepenses();
         Forms.InscriptionPartie.frmInscrirePartie frmInscrirePartie = new Forms.InscriptionPartie.frmInscrirePartie();
         Forms.InscriptionDepenses.frmInscrireDepenses frmInscrireDepense = new Forms.InscriptionDepenses.frmInscrireDepenses();
-
+        Forms.Rebonnement.frmReabonnement frmReabonnements = new Forms.Rebonnement.frmReabonnement();
 
         public frmMenuPrincipal()
         {
@@ -140,6 +140,13 @@ namespace ProjetBDD
         {
             this.Hide();
             frmInscrireDepense.ShowDialog();
+            this.Show();
+        }
+
+        private void miReabonnement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmReabonnements.ShowDialog();
             this.Show();
         }
     }

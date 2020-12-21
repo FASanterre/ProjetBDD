@@ -14,7 +14,8 @@ namespace ProjetBDD.Forms.InscriptionDepenses
     public partial class frmInscrireDepenses : Form
     {
         DataClassProjetBDDDataContext context = new DataClassProjetBDDDataContext();
-        bool choisirTypeService = false;
+        bool boolFonctionne = false;
+        
         public frmInscrireDepenses()
         {
             InitializeComponent();
@@ -29,13 +30,11 @@ namespace ProjetBDD.Forms.InscriptionDepenses
             {
                 cbTypeService.Visible = true;
                 lblType.Visible = true;
-                choisirTypeService = true;
             }
             else
             {
                 cbTypeService.Visible = false;
                 lblType.Visible = false;
-                choisirTypeService = false;
             }
         }
 
@@ -122,13 +121,20 @@ namespace ProjetBDD.Forms.InscriptionDepenses
                         {
                             context.SubmitChanges();
                             MessageBox.Show($"La dépenese {noID} a été ajouté. ", "Ajout de la dépense");
+                            boolFonctionne = true;
                             porteeTransaction.Complete();
-                            this.Hide();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, " Impossible de modifier la base de données");
                         }
+                    }
+                    if (boolFonctionne)
+                    {
+                        this.Hide();
+                        frmFacture frmFacture = new frmFacture(((Abonnement)abonnementBindingSource.Current).Nom, ((Abonnement)abonnementBindingSource.Current).Id, DateTime.Now, nudMontant.Value, typeService, frmConnexion.ID);
+                        frmFacture.ShowDialog();
+                        this.Show();
                     }
                 }
             }
