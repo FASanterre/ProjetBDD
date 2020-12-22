@@ -186,7 +186,7 @@ namespace ProjetBDD.Forms.InscriptionPartie
             this.Controls.Add(this.cbTerrain);
             this.Controls.Add(this.abonnementDataGridView);
             this.Name = "frmInscrirePartie";
-            this.Text = "frmInscrirePartie";
+            this.Text = "Inscription d\'une partie de golf";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInscrirePartie_FormClosing);
             this.Load += new System.EventHandler(this.frmInscrirePartie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementDataGridView)).EndInit();

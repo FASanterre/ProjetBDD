@@ -66,6 +66,12 @@
     <Compile Include="Forms\Abonnement\frmAjoutDependant.Designer.cs">
       <DependentUpon>frmAjoutDependant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMAJAbonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMAJAbonne.Designer.cs">
+      <DependentUpon>frmMAJAbonne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GestionEmploye\frmAjoutEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="Forms\frmConnexion.resx">
       <DependentUpon>frmConnexion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMAJAbonne.resx">
+      <DependentUpon>frmMAJAbonne.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,7 @@
       <DependentUpon>DataClassProjetBDD.dbml</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Abonnement.datasource" />
+    <None Include="Properties\DataSources\Dependant.datasource" />
     <None Include="Properties\DataSources\DescriptionEtTypeAbonnement.datasource" />
     <None Include="Properties\DataSources\Employe.datasource" />
     <None Include="Properties\DataSources\IdEtNomProvince.datasource" />

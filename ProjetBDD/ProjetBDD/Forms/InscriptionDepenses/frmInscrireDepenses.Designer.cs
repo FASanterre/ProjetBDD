@@ -191,7 +191,7 @@ namespace ProjetBDD.Forms.InscriptionDepenses
             this.Controls.Add(this.label1);
             this.Controls.Add(this.abonnementDataGridView);
             this.Name = "frmInscrireDepenses";
-            this.Text = "frmInscrireDepenses";
+            this.Text = "Inscription d\'une nouvelle dépense";
             this.Load += new System.EventHandler(this.frmInscrireDepenses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementBindingSource)).EndInit();

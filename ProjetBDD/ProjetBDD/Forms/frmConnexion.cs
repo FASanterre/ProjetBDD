@@ -54,8 +54,7 @@ namespace ProjetBDD
 
         private void frmConnexion_Load(object sender, EventArgs e)
         {
-            tbID.Text = "1";
-            tbMotDePasse.Text = "Password1$";
+
         }
     }
 }

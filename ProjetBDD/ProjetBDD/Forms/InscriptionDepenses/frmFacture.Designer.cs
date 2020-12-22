@@ -196,7 +196,7 @@ namespace ProjetBDD.Forms.InscriptionDepenses
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmFacture";
-            this.Text = "frmFacture";
+            this.Text = "Facture ";
             this.Load += new System.EventHandler(this.frmFacture_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

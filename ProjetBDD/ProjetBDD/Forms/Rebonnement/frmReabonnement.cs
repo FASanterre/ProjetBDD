@@ -21,6 +21,7 @@ namespace ProjetBDD.Forms.Rebonnement
 
         private void frmReabonnement_Load(object sender, EventArgs e)
         {
+            tbRemarque.Text = "";
             abonnementBindingSource.DataSource = from unAbonnement in context.Abonnements
                                                  where unAbonnement.DataAbonnement.Year != DateTime.Now.Year
                                                  && (unAbonnement.Reabonnements.Count > 0 

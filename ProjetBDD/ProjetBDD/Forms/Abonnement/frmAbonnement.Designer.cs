@@ -572,7 +572,7 @@
             this.Controls.Add(this.gbDependants);
             this.Controls.Add(this.gbAjoutAbonnement);
             this.Name = "frmAbonnement";
-            this.Text = "Abonnement";
+            this.Text = "Ajout d\'un abonnement";
             this.Load += new System.EventHandler(this.frmAbonnement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNbEnfants)).EndInit();

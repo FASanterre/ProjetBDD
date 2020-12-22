@@ -17,6 +17,7 @@ namespace ProjetBDD.Forms
         public int nbrDependantsAjoute = 0;
         public int nbDependants = -1;
         public string idAbonnement = "";
+        public int type = 1;
         public frmAbonnement()
         {
             InitializeComponent();
@@ -208,6 +209,20 @@ namespace ProjetBDD.Forms
 
         private void frmAbonnement_Load(object sender, EventArgs e)
         {
+            nbrDependantsAjoute = 0;
+            nbDependants = 0;
+            tbNom.Clear();
+            tbPrenom.Clear();
+            cbSexe.SelectedItem = null;
+            tbNoCivique.Clear();
+            tbCodePostal.Clear();
+            tbCell.Clear();
+            tbCourriel.Clear();
+            tbRemarque.Clear();
+            tbTelephone.Clear();
+            tbVille.Clear();
+            tbRue.Clear();
+
             var provinces = from prov in context.Provinces
                             select prov;
 
@@ -275,7 +290,7 @@ namespace ProjetBDD.Forms
                 {
                     sexe = 'F';
                 }
-                var type = (from typ in context.TypesAbonnements
+                type = (from typ in context.TypesAbonnements
                             where typ.Description == cbTypeAbonnement.SelectedItem.ToString()
                             select typ.No).SingleOrDefault();
                 
@@ -399,10 +414,10 @@ namespace ProjetBDD.Forms
                 Dependant dep = new Dependant()
                 {
                     Id = id,
-                    Nom = tbNom.Text.Trim(),
-                    Prenom = tbPrenom.Text.Trim(),
+                    Nom = tbNomDep.Text.Trim(),
+                    Prenom = tbPrenomDep.Text.Trim(),
                     Sexe = sexe,
-                    DateNaissance = dtpDateNaissance.Value,
+                    DateNaissance = dtpDateNaissanceDep.Value,
                     IdAbonnement = idAbonnement,
                     Remarque = tbRemarqueDep.Text.Trim()
                 };
@@ -411,7 +426,6 @@ namespace ProjetBDD.Forms
             tbNomDep.Clear();
             tbPrenomDep.Clear();
             cbSexeDep.SelectedIndex= 0;
-            dtpDateNaissanceDep.Value = dtpDateNaissanceDep.MaxDate;
             tbRemarqueDep.Clear();
 
             if (nbrDependantsAjoute == nbDependants)
@@ -431,6 +445,12 @@ namespace ProjetBDD.Forms
                     }
                 }
             }
+            else if (nbrDependantsAjoute > 0)
+            {
+                dtpDateNaissanceDep.MaxDate = DateTime.Now.AddYears(-1);
+                dtpDateNaissanceDep.MinDate = DateTime.Now.AddYears(-18);
+            }
         }
+
     }
 }

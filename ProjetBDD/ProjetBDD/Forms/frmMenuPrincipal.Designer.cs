@@ -40,9 +40,9 @@ namespace ProjetBDD
             this.miModifPrixDepenses = new System.Windows.Forms.ToolStripMenuItem();
             this.miInscriptionPartie = new System.Windows.Forms.ToolStripMenuItem();
             this.miInscriptionDepense = new System.Windows.Forms.ToolStripMenuItem();
-            this.miVisualisation = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeconnexion = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.lblBonjour = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,8 +55,7 @@ namespace ProjetBDD
             this.miMAJAbonnes,
             this.miModifPrixDepenses,
             this.miInscriptionPartie,
-            this.miInscriptionDepense,
-            this.miVisualisation});
+            this.miInscriptionDepense});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1139, 24);
@@ -76,70 +75,65 @@ namespace ProjetBDD
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
             this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
             this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // suppressionToolStripMenuItem
             // 
             this.suppressionToolStripMenuItem.Name = "suppressionToolStripMenuItem";
-            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.suppressionToolStripMenuItem.Text = "Suppression";
             this.suppressionToolStripMenuItem.Click += new System.EventHandler(this.suppressionToolStripMenuItem_Click);
             // 
             // miAbonnement
             // 
             this.miAbonnement.Name = "miAbonnement";
-            this.miAbonnement.Size = new System.Drawing.Size(89, 20);
-            this.miAbonnement.Text = "Abonnement";
+            this.miAbonnement.Size = new System.Drawing.Size(146, 20);
+            this.miAbonnement.Text = "Ajouter un abonnement";
             this.miAbonnement.Click += new System.EventHandler(this.miAbonnement_Click);
             // 
             // miReabonnement
             // 
             this.miReabonnement.Name = "miReabonnement";
-            this.miReabonnement.Size = new System.Drawing.Size(100, 20);
-            this.miReabonnement.Text = "Réabonnement";
+            this.miReabonnement.Size = new System.Drawing.Size(166, 20);
+            this.miReabonnement.Text = "Renouveler un abonnement";
             this.miReabonnement.Click += new System.EventHandler(this.miReabonnement_Click);
             // 
             // miMAJAbonnes
             // 
             this.miMAJAbonnes.Name = "miMAJAbonnes";
-            this.miMAJAbonnes.Size = new System.Drawing.Size(146, 20);
-            this.miMAJAbonnes.Text = "Mise à jour des abonnés";
+            this.miMAJAbonnes.Size = new System.Drawing.Size(245, 20);
+            this.miMAJAbonnes.Text = "Mettre à jour les informations d\'un abonné";
+            this.miMAJAbonnes.Click += new System.EventHandler(this.miMAJAbonnes_Click);
             // 
             // miModifPrixDepenses
             // 
             this.miModifPrixDepenses.Name = "miModifPrixDepenses";
-            this.miModifPrixDepenses.Size = new System.Drawing.Size(164, 20);
-            this.miModifPrixDepenses.Text = "Modification prix/dépenses";
+            this.miModifPrixDepenses.Size = new System.Drawing.Size(141, 20);
+            this.miModifPrixDepenses.Text = "Modifier prix/dépenses";
             this.miModifPrixDepenses.Click += new System.EventHandler(this.miModifPrixDepenses_Click);
             // 
             // miInscriptionPartie
             // 
             this.miInscriptionPartie.Name = "miInscriptionPartie";
-            this.miInscriptionPartie.Size = new System.Drawing.Size(148, 20);
-            this.miInscriptionPartie.Text = "Inscription partie de golf";
+            this.miInscriptionPartie.Size = new System.Drawing.Size(130, 20);
+            this.miInscriptionPartie.Text = "Inscrire partie de golf";
             this.miInscriptionPartie.Click += new System.EventHandler(this.miInscriptionPartie_Click);
             // 
             // miInscriptionDepense
             // 
             this.miInscriptionDepense.Name = "miInscriptionDepense";
-            this.miInscriptionDepense.Size = new System.Drawing.Size(122, 20);
-            this.miInscriptionDepense.Text = "Inscription dépense";
+            this.miInscriptionDepense.Size = new System.Drawing.Size(104, 20);
+            this.miInscriptionDepense.Text = "Inscrire dépense";
             this.miInscriptionDepense.Click += new System.EventHandler(this.miInscriptionDepense_Click);
-            // 
-            // miVisualisation
-            // 
-            this.miVisualisation.Name = "miVisualisation";
-            this.miVisualisation.Size = new System.Drawing.Size(217, 20);
-            this.miVisualisation.Text = "Visualisation des rapports/statistiques";
             // 
             // btnDeconnexion
             // 
@@ -161,16 +155,26 @@ namespace ProjetBDD
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // lblBonjour
+            // 
+            this.lblBonjour.AutoSize = true;
+            this.lblBonjour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBonjour.Location = new System.Drawing.Point(12, 49);
+            this.lblBonjour.Name = "lblBonjour";
+            this.lblBonjour.Size = new System.Drawing.Size(0, 25);
+            this.lblBonjour.TabIndex = 3;
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 148);
+            this.Controls.Add(this.lblBonjour);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmMenuPrincipal";
-            this.Text = "frmMenuPrincipal";
+            this.Text = "Menu principal";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -189,11 +193,11 @@ namespace ProjetBDD
         private System.Windows.Forms.ToolStripMenuItem miModifPrixDepenses;
         private System.Windows.Forms.ToolStripMenuItem miInscriptionPartie;
         private System.Windows.Forms.ToolStripMenuItem miInscriptionDepense;
-        private System.Windows.Forms.ToolStripMenuItem miVisualisation;
         private System.Windows.Forms.Button btnDeconnexion;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suppressionToolStripMenuItem;
+        private System.Windows.Forms.Label lblBonjour;
     }
 }

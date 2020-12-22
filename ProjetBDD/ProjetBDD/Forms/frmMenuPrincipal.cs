@@ -21,6 +21,8 @@ namespace ProjetBDD
         Forms.InscriptionPartie.frmInscrirePartie frmInscrirePartie = new Forms.InscriptionPartie.frmInscrirePartie();
         Forms.InscriptionDepenses.frmInscrireDepenses frmInscrireDepense = new Forms.InscriptionDepenses.frmInscrireDepenses();
         Forms.Rebonnement.frmReabonnement frmReabonnements = new Forms.Rebonnement.frmReabonnement();
+        frmMAJAbonne frmMAJAbonne = new frmMAJAbonne();
+        DataClassProjetBDDDataContext context = new DataClassProjetBDDDataContext();
 
         public frmMenuPrincipal()
         {
@@ -36,7 +38,6 @@ namespace ProjetBDD
             miModifPrixDepenses.Visible = false;
             miInscriptionDepense.Visible = false;
             miInscriptionPartie.Visible = false;
-            miVisualisation.Visible = false;
 
             switch (frmConnexion.TypeEmploye)
             {
@@ -48,13 +49,11 @@ namespace ProjetBDD
                     miModifPrixDepenses.Visible = true;
                     miInscriptionDepense.Visible = true;
                     miInscriptionPartie.Visible = true;
-                    miVisualisation.Visible = true;
                     break;
                 case 2:
                     miGestionEmploye.Visible = true;
                     miModifPrixDepenses.Visible = true;
                     miInscriptionDepense.Visible = true;
-                    miVisualisation.Visible = true;
                     break;
                 case 3:
                     miAbonnement.Visible = true;
@@ -63,7 +62,6 @@ namespace ProjetBDD
                     miModifPrixDepenses.Visible = true;
                     miInscriptionPartie.Visible = true;
                     miInscriptionDepense.Visible = true;
-                    miVisualisation.Visible = true;
                     break;
                 case 4:
                     miAbonnement.Visible = true;
@@ -84,6 +82,16 @@ namespace ProjetBDD
                     miInscriptionDepense.Visible = true;
                     break;
             }
+
+            var employe = (from unEmploye in context.Employes
+                              where unEmploye.No == frmConnexion.ID
+                              select new { unEmploye.Nom, unEmploye.Prenom }).First();
+
+            var type = (from unType in context.TypesEmployes
+                        where unType.No == frmConnexion.TypeEmploye
+                        select new { unType.Description }).First();
+
+            lblBonjour.Text = $"Bonjour {employe.Prenom} {employe.Nom} ({type.Description})";
         }
 
         private void btnDeconnexion_Click(object sender, EventArgs e)
@@ -147,6 +155,13 @@ namespace ProjetBDD
         {
             this.Hide();
             frmReabonnements.ShowDialog();
+            this.Show();
+        }
+
+        private void miMAJAbonnes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMAJAbonne.ShowDialog();
             this.Show();
         }
     }

@@ -66,7 +66,6 @@ namespace ProjetBDD
             this.tbMotDePasse.PasswordChar = '*';
             this.tbMotDePasse.Size = new System.Drawing.Size(266, 34);
             this.tbMotDePasse.TabIndex = 5;
-            this.tbMotDePasse.Text = "Password1$";
             // 
             // label2
             // 

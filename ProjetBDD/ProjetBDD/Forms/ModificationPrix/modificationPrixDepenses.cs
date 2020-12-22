@@ -144,6 +144,7 @@ namespace ProjetBDD.Forms.ModificationPrix
 
         private void modificationPrixDepenses_FormClosing(object sender, FormClosingEventArgs e)
         {
+            btnEnregistrer.Focus();
             if (modif)
             {
                 prixDepensesAbonnementDataGridView.ClearSelection();

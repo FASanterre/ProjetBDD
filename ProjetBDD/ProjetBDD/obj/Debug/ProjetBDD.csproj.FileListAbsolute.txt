@@ -53,3 +53,4 @@ E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.InscriptionDepenses.frmInscrireDepenses.resources
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.InscriptionDepenses.frmFacture.resources
 E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.Rebonnement.frmReabonnement.resources
+E:\H-2020\Base de données\Projet-Final\ProjetBDD\ProjetBDD\ProjetBDD\obj\Debug\ProjetBDD.Forms.frmMAJAbonne.resources

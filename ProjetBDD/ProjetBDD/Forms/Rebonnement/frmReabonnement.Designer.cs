@@ -144,7 +144,7 @@ namespace ProjetBDD.Forms.Rebonnement
             this.Controls.Add(this.label1);
             this.Controls.Add(this.abonnementDataGridView);
             this.Name = "frmReabonnement";
-            this.Text = "frmReabonnement";
+            this.Text = "Renouvellement d\'abonnement";
             this.Load += new System.EventHandler(this.frmReabonnement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementBindingSource)).EndInit();

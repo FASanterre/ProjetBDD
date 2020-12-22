@@ -141,7 +141,7 @@ namespace ProjetBDD.Forms.ModificationPrix
             this.Controls.Add(this.prixDepensesAbonnementDataGridView);
             this.Controls.Add(this.btnEnregistrer);
             this.Name = "modificationPrixDepenses";
-            this.Text = "modificationPrixDepenses";
+            this.Text = "Modification des prix";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.modificationPrixDepenses_FormClosing);
             this.Load += new System.EventHandler(this.modificationPrixDepenses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prixDepensesAbonnementBindingSource)).EndInit();

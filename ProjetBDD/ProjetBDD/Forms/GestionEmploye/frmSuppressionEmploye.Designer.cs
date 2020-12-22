@@ -134,7 +134,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.employeDataGridView);
             this.Name = "frmSuppressionEmploye";
-            this.Text = "frmSuppressionEmploye";
+            this.Text = "Suppression d\'un employé";
             this.Load += new System.EventHandler(this.frmSuppressionEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).EndInit();

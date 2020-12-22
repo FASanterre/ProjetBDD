@@ -496,7 +496,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.Controls.Add(this.tbPrenom);
             this.Controls.Add(this.tbNom);
             this.Name = "frmAjoutEmploye";
-            this.Text = "frmAjoutEmploye";
+            this.Text = "Ajout d\'un employé";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAjoutEmploye_FormClosing);
             this.Load += new System.EventHandler(this.frmAjoutEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).EndInit();

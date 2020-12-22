@@ -32,7 +32,6 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.components = new System.ComponentModel.Container();
             this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -88,16 +88,6 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.employeDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeDataGridView_CellEndEdit);
             this.employeDataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.employeDataGridView_CellValidating);
             this.employeDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.employeDataGridView_DataError);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(317, 456);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(365, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Enregistrer les modifications apportées";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -191,6 +181,16 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.dataGridViewTextBoxColumn17.HeaderText = "Remarque";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 456);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(365, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Enregistrer les modifications apportées";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmModificationEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +199,7 @@ namespace ProjetBDD.Forms.GestionEmploye
             this.Controls.Add(this.button1);
             this.Controls.Add(this.employeDataGridView);
             this.Name = "frmModificationEmploye";
-            this.Text = "frmModificationEmploye";
+            this.Text = "Modification d\'un employé";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmModificationEmploye_FormClosing);
             this.Load += new System.EventHandler(this.frmModificationEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).EndInit();
